@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zhixu Li's Academic Homepage</title>
+    <style>
+        body {
+			font-family: Arial, sans-serif;
+            background-color: #e7f2f8; /* 浅蓝色背景 */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #444;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 20px;
+            margin: 15px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+		.profile {
+            display: flex;
+            align-items: center;
+            margin: 15px;
+            padding: 20px;
+        }
+
+        .profile img {
+            width: 250px;
+            margin-right: 20px;
+        }
+
+        .profile-info {
+            flex-grow: 1;
+        }
+		nav ul li a.active, nav ul li a:hover {
+            background-color: #a7c7e7; /* 选中或悬浮时的颜色 */
+        }
+        .section {
+            padding: 20px;
+            margin: 15px;
+        }
+		 .section p {
+            margin-bottom: 10px; /* 增加段落间的间隔 */
+        }
+		.intro, .section {
+			max-width: 100%; /* 限制最大宽度 */
+			margin-left: 20px; /* 左边距，保持内容不紧贴浏览器边缘 */
+			padding: 20px; /* 内部间隔 */
+		}
+
+		
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zhixu Li's Homepage</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+			<li><a href="#news">News</a></li>
+            <li><a href="#education">Education Experience</a></li>
+            <li><a href="research.html">Research</a></li>
+        </ul>
+    </nav>
+    <section class="content">
+        <div class="profile">
+            <img src="zhixu_li.jpg" alt="Zhixu Li">
+            <div class="profile-info">
+                <h2>Zhixu Li 黎之旭</h2>
+                <p>Ph.D. student advised by <a href="https://www.cs.ucr.edu/~qzhang/">Prof. Qian Zhang</a></p>
+                <p>Contact me at: Zli538@ucr.edu or calt2008lzx@gmail.com</p>
+				<p>My resume <a href="https://drive.google.com/file/d/1LsdwtNrZ65GGkhgA8HFTDYZ3RRwL16uQ/view?usp=sharing">here</a>. My LinkedIn page is <a href="https://www.linkedin.com/in/zhixu-li-98a3a2253/">here</a>.
+            </div>
+        </div>
+    </section>
+	
+	
+	<section class="intro">
+		<h2>About Me</h2>
+		<p>Hi, I am Zhixu Li, a first-year Ph.D. student of Professor Qian Zhang. My current research interests include intersection of Graph Generation and Software Engineering and  I remain open and eager to discover and dedicate time to additional areas that spark my interest.</p>
+	</section>
+	
+	
+	<section id="news" class="section">
+        <h2>News</h2>
+        <!-- ... [新闻内容] ... -->
+		<p>My personal blog is <a href="https://zhixuli-the-runner.github.io/">here</a></p>
+		<p>Selected to serve in ASPLOS’24 Artifact Evaluation Committee. -----July.2023</p>
+		<p>Started my new journey as a Ph.D. student at UCR. -----Sep.2023</p>
+		<p>Selected to serve in 24th ChinaSys Workshop (ChinaSys 2023 Posters) Program Committee.-----June.2023</p>
+		
+    </section>
+
+    <section id="education" class="section">
+        <h2>Education Experience</h2>
+        <!-- ... [教育经历内容] ... -->
+		<p>University of California Riverside Riverside, CA, US</p>
+		<p>PhD student -----Sep. 2023-Current</p>
+		<br> <!-- 增加空行 -->
+		
+		<p>Harbin Institute of Technology at Weihai Weihai, China</p>
+		<p>B.Eng. in Cyberspace Security (School of Computer Science & Technology) -----Sep. 2019-Jun. 2023</p>
+		<br> <!-- 增加空行 -->
+		
+		<p>University of California Riverside Extension Riverside, CA</p>
+		<p>Graduate Preparation Program in Engineering (GPP-E) -----Sep. 2022-June.2023</p>
+		
+		
+    </section>
+	
+	<section class="section">
+    <h2>Working Experience</h2>
+    <p>UCR,CSE</p>
+    <p>Reader(TA) for CS142 -----Jan,2023~ April,2023</p>
+    <p>UCR,CSE</p>
+    <p>Reader(TA) for CS260 -----April,2023~June,2023</p>
+	</section>
+	
+	
+    <footer>
+        <p>&copy; 2023 Zhixu Li. All rights reserved.</p>
+    </footer>
+</body>
+</html>
