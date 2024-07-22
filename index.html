@@ -4,28 +4,32 @@
     <title>Zhixu Li's Homepage</title>
     <style>
         body {
-                        font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #e7f2f8;  /* 冷色 */
             color: #333;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #333;/* 顶部背景颜色调暖 */
+            background-color: #333; /* 顶部背景颜色调暖 */
             color: white;
             padding: 10px 0;
             text-align: center;
+        }
+        nav {
+            text-align: center;
+            background-color: #444;
+            padding: 10px 0;
         }
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            background-color: #444;
-            text-align: center;
+            display: inline-block;
         }
         nav ul li {
             display: inline;
-            margin-right: 20px;
+            margin-right: 40px; /* 增加间隔 */
         }
         nav ul li a {
             text-decoration: none;
@@ -45,70 +49,45 @@
             text-align: center;
             padding: 10px 0;
         }
-                .profile {
+        .profile {
             display: flex;
             align-items: center;
             margin: 15px;
             padding: 20px;
+            padding-left: 40px; /* 添加左边距 */
         }
-
         .profile img {
             width: 250px;
             margin-right: 20px;
         }
-
         .profile-info {
             flex-grow: 1;
         }
-                nav ul li a.active, nav ul li a:hover {
-            background-color: #a7c7e7; /* ????????? */
+        nav ul li a.active, nav ul li a:hover {
+            background-color: #a7c7e7; /* Hover效果 */
         }
         .section {
             padding: 20px;
-            margin: 15px;
+            margin: 15px auto;
+            text-align: left; /* 文字内容左对齐 */
+            padding-left: calc(40px + 250px + 20px); /* 确保左边距与图片对齐 */
         }
-                 .section p {
-            margin-bottom: 10px; /* ???????? */
+        .section p {
+            margin-bottom: 10px; /* 段落间距 */
         }
-                .intro, .section {
-                        max-width: 100%; /* ?????? */
-                        margin-left: 20px; /* ???,???????????? */
-                        padding: 20px; /* ???? */
-                }
-
-		
-		
-		nav {
-			width: 100%; /* Adjust to your preferred width */
-			/* Other styles for your nav bar */
-		}
-
-		nav ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			overflow: hidden; /* Prevents items from going outside the nav bar */
-		}
-
-		nav li {
-			float: left; /* Adjust as per your design */
-		}
-
-		nav li a {
-			display: block;
-			text-align: center;
-			padding: 14px 16px; /* Adjust padding as needed */
-			text-decoration: none;
-		}
-
-		/* Add hover effect */
-		nav li a:hover {
-			background-color: #ddd; /* Example hover color, adjust as needed */
-			/* Ensure that the padding and font size do not cause overflow */
-		}
-
+        .intro {
+            text-align: left; /* 将文字内容左对齐 */
+            padding-left: calc(40px + 250px + 20px); /* 确保左边距与图片对齐 */
+        }
+        .about, .news, .education, .experience {
+            max-width: none; /* 取消最大宽度 */
+            margin: 0 auto; /* 居中 */
+            padding: 20px; /* 内边距 */
+            text-align: left; /* 文字内容左对齐 */
+            padding-left: calc(40px + 250px + 20px); /* 确保左边距与图片对齐 */
+        }
     </style>
-        <meta name="google-site-verification" content="AmKx_p7RQ4EwUJ2_MpKZhBRGjW-CBYF0RoKfM1jML3Q" />
+    <meta name="google-site-verification" content="AmKx_p7RQ4EwUJ2_MpKZhBRGjW-CBYF0RoKfM1jML3Q" />
 </head>
 <body>
     <header>
@@ -116,83 +95,66 @@
     </header>
     <nav>
         <ul>
-		 <!-- 导航菜单项 -->
             <li><a href="index.html">Home</a></li>
-                        <li><a href="#news">News</a></li>
+            <li><a href="#news">News</a></li>
             <li><a href="#education">Education Experience</a></li>
             <li><a href="research.html">Research</a></li>
         </ul>
     </nav>
     <section class="content">
-	<!-- 个人简介部分 -->
         <div class="profile">
             <img src="zhixu_li.jpg" alt="Zhixu Li">
             <div class="profile-info">
                 <h2>Zhixu Li 黎之旭</h2>
-                <p>First-yeasr Ph.D. student advised by
-                <a href="https://profiles.ucr.edu/app/home/profile/jiachenl">Prof. Jiachen Li <a> at UC Riverside</p>
+                <p>First-year Ph.D. student advised by <a href="https://profiles.ucr.edu/app/home/profile/jiachenl">Prof. Jiachen Li</a> at UC Riverside</p>
                 <p>Contact me at: Zli538[at]ucr.edu or calt2008lzx[at]gmail.com</p>
             </div>
         </div>
     </section>
 
+    <section id="about-me" class="intro about">
+        <h2>About Me</h2>
+        <p>Hi, I am Zhixu Li, a first-year Ph.D. student advised by <b>Brilliant</b> <a href="https://profiles.ucr.edu/app/home/profile/jiachenl">Prof. Jiachen Li</a> at UC Riverside. Before that, I was advised by <a href="https://www.cs.ucr.edu/~qzhang/">Prof. Qian Zhang</a>. My current research interests focus on the intersection of formal methods, imitation learning, and reinforcement learning, particularly their applications in robotics. My ultimate goal is to develop a trustworthy embedded AI system.</p>
+    </section>
 
-        <section class="intro">
-		 <!-- 关于我部分 -->
-                <h2>About Me</h2>
-                <p>Hi, I am Zhixu Li, a first-year Ph.D. student advised by <b>Brilliaint</b> <a href="https://profiles.ucr.edu/app/home/profile/jiachenl">Prof. Jiachen Li <a> at UC Riverside. Before that, I was advised by <a href="https://www.cs.ucr.edu/~qzhang/">Prof. Qian Zhang</a>.
-                My current research interests focus on the intersection of formal methods, imitation learning, and reinforcement learning, particularly their applications in robotics. My ultimate goal is to develop a trustworthy embedded AI system. </p>
-        </section>
-
-
-        <section id="news" class="section">
+    <section id="news" class="section news">
         <h2>News</h2>
-        <!-- 新闻部分 -->
-                
-				<! Selected to serve as reviewer for NeurIPS'24  -----Jul.2023~Apr. 2024   ––>		
-			
-				
-				
-				<! –– My personal blog is <a href="https://zhixuli-the-runner.github.io/"here -----Feb,2024  ––>		
-				<! –– External reviewer, The ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA) 2025 - Research Track  -----Feb,2024 ––>
-				
-				
-				
-				
-								
-				<p>I joined Prof. Jiachen's <a href="https://tasl.ucr.edu/?_gl=1*k400gs*_ga*MTM3MDQwNjg5MS4xNzExNzU3NDYy*_ga_Z1RGSBHBF7*MTcxMTc1NzQ2MS4xLjEuMTcxMTc1Nzg3OS4wLjAuMA..*_ga_S8BZQKWST2*MTcxMTc1NzQ2MS4xLjEuMTcxMTc1Nzg3OS4wLjAuMA.. ">TASL <a>lab\(^o^)/~.
-				<p>Selected to serve in ASPLOS’24 Artifact Evaluation Committee and received Excellent service certificate in all three cycles.  -----Jul.2023~Apr. 2024</p>
-				<p>Recieved UCR Dean's Distinguished Fellowship</p>
-				<p>Started my new journey as a Ph.D. student at UCR. -----Sep.2023</p>
-                <p>Selected to serve in 24th ChinaSys Workshop (ChinaSys 2023 Posters) Program Committee.-----June.2023</p>
-
+        <p>[Apr.2024] I joined Prof. Jiachen's <a href="https://tasl.ucr.edu/?_gl=1*k400gs*_ga*MTM3MDQwNjg5MS4xNzExNzU3NDYy*_ga_Z1RGSBHBF7*MTcxMTc1NzQ2MS4xLjEuMTcxMTc1Nzg3OS4wLjAuMA..*_ga_S8BZQKWST2*MTcxMTc1NzQ2MS4xLjEuMTcxMTc1Nzg3OS4wLjAuMA..">TASL</a> lab\(^o^)/~.</p>
+        <p>[Jul.2023~Apr.2024] Selected to serve in ASPLOS’24 Artifact Evaluation Committee and received an Excellent Service certificate in all three cycles.</p>
+        <p>[Sep.2023] Received UCR Dean's Distinguished Fellowship</p>
+        <p>[Sep.2023] Started my new journey as a Ph.D. student at UCR.</p>
+        <p>[June.2023] Selected to serve in 24th ChinaSys Workshop (ChinaSys 2023 Posters) Program Committee.</p>
+        <p>My personal blog is <a href="https://zhixuli-the-runner.github.io/">here</a></p>
+        
     </section>
 
-    <section id="education" class="section">
+    <section id="education" class="section education">
         <h2>Education Experience</h2>
-        <!-- 教育经历部分 -->
-                <p>University of California Riverside Riverside, CA, US</p>
-                <p>PhD student -----Sep. 2023-Current</p>
-                <br> <!-- ???? -->
-
-                <p>University of California Riverside Extension Riverside, CA</p>
-                <p>Graduate Preparation Program in Engineering (GPP-E) -----Sep. 2022-June.2023</p>
-
-
+        <p>[Sep. 2023-Current] University of California Riverside, Riverside, CA, US</p>
+        <p>PhD student</p>
+        <br>
+        <p>[Sep. 2022-June.2023] University of California Riverside Extension, Riverside, CA</p>
+        <p>Graduate Preparation Program in Engineering (GPP-E)</p>
     </section>
 
-        <section class="section">
-		<!-- 工作经验部分 -->
-    <h2>Working Experience</h2>
-    <p>UCR,CSE</p>
-    <p>Reader(TA) for CS142 -----Jan,2023~ April,2023</p>
-    <p>UCR,CSE</p>
-    <p>Reader(TA) for CS260 -----April,2023~June,2023</p>
-        </section>
-
+    <section id="working-experience" class="section experience">
+        <h2>Working Experience</h2>
+        <p>[June,2024~Aug,2024] UCR, CSE</p>
+        <p>TA for CS111</p>
+        <p>[Jan,2023~April,2023] UCR, CSE</p>
+        <p>Reader(TA) for CS142</p>
+        <p>[April,2023~June,2023] UCR, CSE</p>
+        <p>Reader(TA) for CS260</p>
+    </section>
 
     <footer>
         <p>&copy; 2023 Zhixu Li. All rights reserved.</p>
+        <p>Last updated: <span id="last-updated"></span></p>
     </footer>
+
+    <script>
+        // 设置最近更新日期
+        document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
+    </script>
 </body>
 </html>
