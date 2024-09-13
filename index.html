@@ -11,14 +11,14 @@
             padding: 0;
         }
         header {
-            background-color: #333; /* 顶部背景颜色调暖 */
+            background-color: #507ea4; /* 顶部背景颜色调为较柔和的深蓝色 */
             color: white;
             padding: 10px 0;
             text-align: center;
         }
         nav {
             text-align: center;
-            background-color: #444;
+            background-color: #6089b2; /* 导航栏颜色稍深 */
             padding: 10px 0;
         }
         nav ul {
@@ -37,7 +37,7 @@
             padding: 10px 15px;
         }
         nav ul li a:hover {
-            background-color: #555;
+            background-color: #789bbf; /* Hover效果更浅的蓝色 */
         }
         .content {
             padding: 20px;
@@ -49,42 +49,57 @@
             text-align: center;
             padding: 10px 0;
         }
-        .profile {
+        .global-profile {
             display: flex;
+            justify-content: center;
             align-items: center;
-            margin: 15px;
-            padding: 20px;
-            padding-left: 40px; /* 添加左边距 */
+            margin-top: 10px; /* 调整头像与标题之间的间距 */
         }
-        .profile img {
-            width: 250px;
-            margin-right: 20px;
+        .global-profile img {
+            width: 150px; /* 头像宽度，可以根据需要调整 */
+            border-radius: 50%; /* 圆形头像 */
+            margin-right: 20px; /* 头像与右边信息的间距 */
         }
         .profile-info {
-            flex-grow: 1;
+            text-align: left;
+            color: white;
+        }
+        .profile-info h2 {
+            margin: 0;
+        }
+        .profile-info p {
+            margin: 5px 0;
+        }
+        .github-button {
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .github-button img {
+            width: 24px; /* GitHub 按钮图标大小 */
+            vertical-align: middle; /* 垂直居中对齐 */
         }
         nav ul li a.active, nav ul li a:hover {
-            background-color: #a7c7e7; /* Hover效果 */
+            background-color: #789bbf; /* Hover效果更浅的蓝色 */
         }
         .section {
             padding: 20px;
             margin: 15px auto;
             text-align: left; /* 文字内容左对齐 */
-            padding-left: calc(40px + 250px + 20px); /* 确保左边距与图片对齐 */
+            padding-left: 40px; /* 确保左边距与内容对齐 */
         }
         .section p {
             margin-bottom: 10px; /* 段落间距 */
         }
         .intro {
             text-align: left; /* 将文字内容左对齐 */
-            padding-left: calc(40px + 250px + 20px); /* 确保左边距与图片对齐 */
+            padding-left: 40px; /* 确保左边距与内容对齐 */
         }
         .about, .news, .education, .experience {
             max-width: none; /* 取消最大宽度 */
             margin: 0 auto; /* 居中 */
             padding: 20px; /* 内边距 */
             text-align: left; /* 文字内容左对齐 */
-            padding-left: calc(40px + 250px + 20px); /* 确保左边距与图片对齐 */
+            padding-left: 40px; /* 确保左边距与内容对齐 */
         }
     </style>
     <meta name="google-site-verification" content="AmKx_p7RQ4EwUJ2_MpKZhBRGjW-CBYF0RoKfM1jML3Q" />
@@ -92,6 +107,19 @@
 <body>
     <header>
         <h1>Zhixu Li's Homepage</h1>
+        <div class="global-profile">
+            <img src="zhixu_li.jpg" alt="Zhixu Li">
+            <div class="profile-info">
+                <h2>Zhixu Li 黎之旭</h2>
+                <p>First-year Ph.D. student advised by <a href="https://jiachenli94.github.io/" style="color: #ffd700;">Prof. Jiachen Li</a> at <a href="https://tasl-lab.github.io/" style="color: #ffd700;">TASL lab</a>, <a href="https://www.ucr.edu/" style="color: #ffd700;">UC Riverside</a></p>
+                <p>Contact me at: Zli538[at]ucr.edu or calt2008lzx[at]gmail.com</p>
+                <div class="github-button">
+                    <a href="https://github.com/ZhixuLi-the-Runner" target="_blank">
+                        <img src="github-icon.png" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
     <nav>
         <ul>
@@ -101,16 +129,6 @@
             <li><a href="research.html">Research</a></li>
         </ul>
     </nav>
-    <section class="content">
-        <div class="profile">
-            <img src="zhixu_li.jpg" alt="Zhixu Li">
-            <div class="profile-info">
-                <h2>Zhixu Li 黎之旭</h2>
-                <p>First-year Ph.D. student advised by <a href="https://profiles.ucr.edu/app/home/profile/jiachenl">Prof. Jiachen Li</a> at UC Riverside</p>
-                <p>Contact me at: Zli538[at]ucr.edu or calt2008lzx[at]gmail.com</p>
-            </div>
-        </div>
-    </section>
 
     <section id="about-me" class="intro about">
         <h2>About Me</h2>
@@ -126,7 +144,6 @@
         <p>[Sep.2023] Started my new journey as a Ph.D. student at UCR.</p>
         <p>[June.2023] Selected to serve in 24th ChinaSys Workshop (ChinaSys 2023 Posters) Program Committee.</p>
         <p>My personal blog is <a href="https://zhixuli-the-runner.github.io/">here</a></p>
-        
     </section>
 
     <section id="education" class="section education">
