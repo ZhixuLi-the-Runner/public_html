@@ -41,7 +41,8 @@
         }
         .content {
             padding: 20px;
-            margin: 15px;
+            margin: 15px auto;
+            max-width: 800px; /* 设置内容最大宽度 */
         }
         footer {
             background-color: #333;
@@ -85,21 +86,35 @@
             padding: 20px;
             margin: 15px auto;
             text-align: left; /* 文字内容左对齐 */
-            padding-left: 40px; /* 确保左边距与内容对齐 */
+            max-width: 800px; /* 设置内容最大宽度 */
         }
         .section p {
             margin-bottom: 10px; /* 段落间距 */
         }
         .intro {
             text-align: left; /* 将文字内容左对齐 */
-            padding-left: 40px; /* 确保左边距与内容对齐 */
+            max-width: 800px; /* 设置内容最大宽度 */
+            margin: 0 auto; /* 居中显示 */
+            padding: 20px; /* 内边距 */
         }
-        .about, .news, .education, .experience {
-            max-width: none; /* 取消最大宽度 */
+        .about, .news, .education,         .experience {
+            max-width: 800px; /* 设置内容最大宽度 */
             margin: 0 auto; /* 居中 */
             padding: 20px; /* 内边距 */
             text-align: left; /* 文字内容左对齐 */
-            padding-left: 40px; /* 确保左边距与内容对齐 */
+        }
+        /* 新增日期样式 */
+        .date-badge {
+            display: inline-block;
+            background-color: #507ea4;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .experience-item, .education-item, .news-item {
+            margin-bottom: 15px;
         }
     </style>
     <meta name="google-site-verification" content="AmKx_p7RQ4EwUJ2_MpKZhBRGjW-CBYF0RoKfM1jML3Q" />
@@ -125,51 +140,99 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="#news">News</a></li>
-            <li><a href="#education">Education Experience</a></li>
-            <li><a href="research.html">Research</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <!-- <li><a href="research.html">Research</a></li> -->
         </ul>
     </nav>
 
     <section id="about-me" class="intro about">
         <h2>About Me</h2>
-        <p>Hi, I am Zhixu Li, a second-year Ph.D. student advised by <b>Brilliant</b> <a href="https://profiles.ucr.edu/app/home/profile/jiachenl">Prof. Jiachen Li</a> at UC Riverside. Before that, I was advised by <a href="https://www.cs.ucr.edu/~qzhang/">Prof. Qian Zhang</a>. My current research interests focus on the intersection of formal methods, imitation learning, and reinforcement learning, particularly their applications in robotics. My ultimate goal is to develop a trustworthy embedded AI system.</p>
+        <p>Hi, I am Zhixu Li, a second-year Ph.D. student advised by <b>Brilliant</b> <a href="https://profiles.ucr.edu/app/home/profile/jiachenl">Prof. Jiachen Li</a> at UC Riverside. Before that, I was advised by <a href="https://www.cs.ucr.edu/~qzhang/">Prof. Qian Zhang</a>. My current research interests focus on safety-oriented imitation learning (particularly diffusion policies) and Vision-Language-Action (VLA) models. My long-term goal is to develop trustworthy embedded AI systems that provide safety guarantees for real-world applications.</p>
     </section>
 
     <section id="news" class="section news">
         <h2>News</h2>
-        <p>[Jan.2025] Selected to serve as a reviewer for RA-L'25.</p>
-        <p>[Nov.2024] Selected to serve as a reviewer for ICLR'25.</p>
-        <p>[Nov.2024] Selected to serve as a reviewer for ICRA'25.</p>
-        <p>[Jun.2024~Jul.2024] Selected to serve as a reviewer for NeurIPS’24.</p>
-        <p>[Apr.2024] I joined Prof. Jiachen's <a href="https://tasl.ucr.edu/?_gl=1*k400gs*_ga*MTM3MDQwNjg5MS4xNzExNzU3NDYy*_ga_Z1RGSBHBF7*MTcxMTc1NzQ2MS4xLjEuMTcxMTc1Nzg3OS4wLjAuMA..*_ga_S8BZQKWST2*MTcxMTc1NzQ2MS4xLjEuMTcxMTc1Nzg3OS4wLjAuMA..">TASL</a> lab\(^o^)/~.</p>
-        <p>[Jul.2023~Apr.2024] Selected to serve in ASPLOS’24 Artifact Evaluation Committee and received an Excellent Service certificate in all three cycles.</p>
-        <p>[Sep.2023] Received UCR Dean's Distinguished Fellowship</p>
-        <p>[Sep.2023] Started my new journey as a Ph.D. student at UCR.</p>
-        <p>[June.2023] Selected to serve in 24th ChinaSys Workshop (ChinaSys 2023 Posters) Program Committee.</p>
+        <div class="news-item">
+            <span class="date-badge">Jan 2025</span>
+            <span>Selected to serve as a reviewer for RA-L'25.</span>
+        </div>
+        <div class="news-item">
+            <span class="date-badge">Nov 2024</span>
+            <span>Selected to serve as a reviewer for ICLR'25.</span>
+        </div>
+        <div class="news-item">
+            <span class="date-badge">Nov 2024</span>
+            <span>Selected to serve as a reviewer for ICRA'25.</span>
+        </div>
+        <div class="news-item">
+            <span class="date-badge">Jun-Jul 2024</span>
+            <span>Selected to serve as a reviewer for NeurIPS'24.</span>
+        </div>
+        <div class="news-item">
+            <span class="date-badge">Apr 2024</span>
+            <span>I joined Prof. Jiachen's <a href="https://tasl.ucr.edu/?_gl=1*k400gs*_ga*MTM3MDQwNjg5MS4xNzExNzU3NDYy*_ga_Z1RGSBHBF7*MTcxMTc1NzQ2MS4xLjEuMTcxMTc1Nzg3OS4wLjAuMA..*_ga_S8BZQKWST2*MTcxMTc1NzQ2MS4xLjEuMTcxMTc1Nzg3OS4wLjAuMA..">TASL</a> lab\(^o^)/~.</span>
+        </div>
+        <div class="news-item">
+            <span class="date-badge">Jul 2023-Apr 2024</span>
+            <span>Selected to serve in ASPLOS'24 Artifact Evaluation Committee and received an Excellent Service certificate in all three cycles.</span>
+        </div>
+        <div class="news-item">
+            <span class="date-badge">Sep 2023</span>
+            <span>Received UCR Dean's Distinguished Fellowship</span>
+        </div>
+        <div class="news-item">
+            <span class="date-badge">Sep 2023</span>
+            <span>Started my new journey as a Ph.D. student at UCR.</span>
+        </div>
+        <div class="news-item">
+            <span class="date-badge">Jun 2023</span>
+            <span>Selected to serve in 24th ChinaSys Workshop (ChinaSys 2023 Posters) Program Committee.</span>
+        </div>
         <!--<p>My personal blog is <a href="https://zhixuli-the-runner.github.io/">here</a></p>-->
     </section>
 
     <section id="education" class="section education">
         <h2>Education Experience</h2>
-        <p>[Sep. 2023-Current] University of California Riverside, Riverside, CA, US</p>
-        <p>PhD student</p>
-        <br>
-        <p>[Sep. 2022-June.2023] University of California Riverside Extension, Riverside, CA</p>
-        <p>Graduate Preparation Program in Engineering (GPP-E)</p>
+        <div class="education-item">
+            <span class="date-badge">Sep 2023-Present</span>
+            <strong>University of California Riverside, Riverside, CA, US</strong>
+            <p>PhD student</p>
+        </div>
+        <div class="education-item">
+            <span class="date-badge">Sep 2022-Jun 2023</span>
+            <strong>University of California Riverside Extension, Riverside, CA</strong>
+            <p>Graduate Preparation Program in Engineering (GPP-E)</p>
+        </div>
     </section>
 
-    <section id="working-experience" class="section experience">
-        <h2>Working Experience</h2>
-        <p>[Jan,2025~March,2025] UCR, CSE</p>
-        <p>TA for CS142 and CS178B</p>
-        <p>[Oct,2024~Dec,2024] UCR, CSE</p>
-        <p>TA for CS111</p>
-        <p>[June,2024~Aug,2024] UCR, CSE</p>
-        <p>TA for CS111</p>
-        <p>[Jan,2023~April,2023] UCR, CSE</p>
-        <p>Reader for CS142</p>
-        <p>[April,2023~June,2023] UCR, CSE</p>
-        <p>Reader for CS260</p>
+    <section id="teaching" class="section experience">
+        <h2>Teaching Experience</h2>
+        <div class="experience-item">
+            <span class="date-badge">Jan-Mar 2025</span>
+            <strong>UCR, CSE</strong>
+            <p>TA for CS142 and CS178B</p>
+        </div>
+        <div class="experience-item">
+            <span class="date-badge">Oct-Dec 2024</span>
+            <strong>UCR, CSE</strong>
+            <p>TA for CS111</p>
+        </div>
+        <div class="experience-item">
+            <span class="date-badge">Jun-Aug 2024</span>
+            <strong>UCR, CSE</strong>
+            <p>TA for CS111</p>
+        </div>
+        <div class="experience-item">
+            <span class="date-badge">Jan-Apr 2023</span>
+            <strong>UCR, CSE</strong>
+            <p>Reader for CS142</p>
+        </div>
+        <div class="experience-item">
+            <span class="date-badge">Apr-Jun 2023</span>
+            <strong>UCR, CSE</strong>
+            <p>Reader for CS260</p>
+        </div>
     </section>
 
     <footer>
